@@ -33,6 +33,6 @@ runs:
       run: |
         export AWS_ACCESS_KEY_ID="${{ inputs.access_key }}"
         export AWS_SECRET_ACCESS_KEY="${{ inputs.secret_key }}"
-        aws s3 cp --endpoint=https://${{space_region}}.digitaloceanspaces.com s3://${{ inputs.space_name }}/${{ inputs.source }} ${{ inputs.out_dir }}
+        aws s3 cp --endpoint=https://${{ inputs.space_region }}.digitaloceanspaces.com s3://${{ inputs.space_name }}/${{ inputs.source }} ${{ inputs.out_dir }}
         
       shell: bash
